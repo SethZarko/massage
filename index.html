@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Kaylitas Relaxation Massage</title>
+  </head>
+  <body id="App">
+    <section id="header">
+      <header :class="clearHeader ? 'clear-header' : '' ">
+        <nav>
+          <ul>
+            <li>
+              <a href="#" :class="currentPage === 'home' ? 'activeNavLink' : '' " @click="displayPages('show-home')">Home</a>
+            </li>
+            <li>
+              <a href="#" :class="currentPage === 'about' ? 'activeNavLink' : '' " @click="displayPages('show-about')">About</a>
+            </li>
+            <li>
+              <a href="#" :class="currentPage === 'services' ? 'activeNavLink' : '' " @click="displayPages('show-services')">Services</a>
+            </li>
+            <li>
+              <a href="#" :class="currentPage === 'contact' ? 'activeNavLink' : '' " @click="displayPages('show-contact')">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </section>
+
+    <main>
+      <section :class="homePage">
+        <div class="hero-container">
+            <div class="overlay"></div>
+            <img class="hero-image" src="./images/hero1.jpg" alt="plant image">
+
+            <div class="hero-content-container">
+                <div class="hero-text-container">
+                    <h1>Relaxation</h1>
+                    <p>A relieving and calming relaxation massage experience designed to create peace throughout your mind and body</p>
+                </div>
+                <div class="hero-btn-container">
+                    <a href="#" @click="displayPages('show-services')">Learn More</a>
+                    <a href="#" @click="displayPages('show-contact')">Book Appointment</a>
+                </div>
+            </div>
+            
+        </div>
+      </section>
+
+      <section :class="aboutPage">
+        <h1>About Page</h1>
+      </section>
+
+      <section :class="servicesPage">
+        <h1>Services Page</h1>
+      </section>
+
+      <section :class="contactPage">
+        <h1>Contact Page</h1>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
