@@ -195,7 +195,7 @@ nav a:hover {
 
 .show-services {
     display: block;
-    padding: 1em;
+    padding: 5em 1em 0;
 }
 
 /* CONTACT PAGE */
@@ -206,7 +206,7 @@ nav a:hover {
 
 .show-contact {
     display: block;
-    padding: 1em;
+    padding: 5em 1em 0;
 }
 
 /* MEDIA QUERIES */
